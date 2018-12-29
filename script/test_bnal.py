@@ -55,15 +55,21 @@ class Test_login:
 
     @pytest.mark.parametrize('username, password, tag, toast, correct_toast', read_yaml())
     # @pytest.mark.run(order=10)
+    @allure.step('登陆登出-异常处理')
     def test_login_error(self, username, password, toast, correct_toast, tag):
         # 点击我的
+        allure.attach('描述', '点击我的')
         self.bnal.get_page_home().click_my()
         # 点击已有账号输入
+        allure.attach('描述', '点击已有账号登录')
         self.bnal.get_page_home().click_my_login()
+        allure.attach('描述', '输入账号密码')
         self.bnal.get_page_Input().login_kuang_error(username, password)
+        allure.attach('描述', '点击登录')
         self.bnal.get_page_Input().click_login()
         if tag == 1:
             try:
+
                 success_login = self.bnal.get_page_Logined().is_logined()
                 # 点击设置, 退出
                 self.bnal.get_page_Logined().click_setting_back()
@@ -77,9 +83,12 @@ class Test_login:
                 self.bnal.get_page_Input().click_x()
         else:
             try:
+
                 toast_meg = self.bnal.get_page_Input().get_toast_text(toast)
+                allure.attach('描述', '截图')
                 assert toast_meg == correct_toast, self.bnal.get_page_Input().get_screen()
             finally:
+                allure.attach('描述', '点击x号')
                 self.bnal.get_page_Input().click_x()
 
 
