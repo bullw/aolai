@@ -1,0 +1,58 @@
+# #test_login_001:
+# #  username: "13488834010"
+# #  password: "159357li"
+# #  tag: 1
+
+# #test_login_002:
+# #  username: " 13488834010"
+# #  password: "159357li"
+# #  tag: 1
+
+# test_login_003:
+#   username: "13488834010 "
+#   password: "159357li"
+#   toast: " "
+#   correct_toast: " "
+#   tag: 1
+
+# test_login_006:
+#   username: "13488834010 "
+#   password: "9998888"
+#   toast: "登录密码错误"
+#   correct_toast: "登录密码错误"
+#   tag: 0
+
+# test_login_010:
+#   username: "1111中国"
+#   password: "9998888"
+#   toast: "此用户不存在"
+#   correct_toast: "此用户不存在"
+#   tag: 0
+# test_login_001:
+#   username: "13488834010"
+#   password: "159357li"
+#   tag: 1
+
+# test_login_002:
+#   username: " 13488834010"
+#   password: "159357li"
+#   tag: 1
+
+test_login_003:
+  username: "13488834010 "
+  password: "159357li"
+  tag: 1
+
+test_login_006:
+  username: "13488834010 "
+  password: "9998888"
+  toast: "登录密码"
+  correct_toast: "登录密码错误"
+  tag: 0
+
+test_login_010:
+  username: "11111中国"
+  password: "9998888"
+  toast: "不存在"
+  correct_toast: "此用户不存在"
+  tag: 0
