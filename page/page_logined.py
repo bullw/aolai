@@ -1,6 +1,6 @@
 from data.base_action import Action
 import data
-
+import allure
 class Logined(Action):
 
     def __init__(self, driver):

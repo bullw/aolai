@@ -1,7 +1,7 @@
 import time
 
 import pytest
-
+import allure
 import data
 from data.base_action import Action
 

@@ -2,6 +2,7 @@ import os, sys
 sys.path.append(os.getcwd())
 import time
 import pytest
+import allure
 import yaml
 from data.base_driver import driver_init
 from page.page_relation import Relation_driver

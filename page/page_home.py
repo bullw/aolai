@@ -1,5 +1,6 @@
 from data.base_action import Action
 import data
+import allure
 import os, sys
 sys.path.append(os.getcwd())
 """
